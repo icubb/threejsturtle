@@ -8,12 +8,14 @@ import { Canvas, extend, useThree, useLoader, useFrame } from '@react-three/fibe
 import { OrbitControls, Sky } from '@react-three/drei'
 import { Water } from 'three-stdlib'
 
+import waterImg from './imgs/waternormals.jpg';
+
 extend({ Water })
 
 function Ocean() {
   const ref = useRef()
   const gl = useThree((state) => state.gl)
-  const waterNormals = useLoader(THREE.TextureLoader, '/waternormals.jpg')
+  const waterNormals = useLoader(THREE.TextureLoader, waterImg)
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
   const geom = useMemo(() => new THREE.PlaneGeometry(10000, 10000), [])
   const config = useMemo(

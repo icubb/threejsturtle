@@ -3,17 +3,21 @@ import React, {useRef, useState} from 'react';
 import {Canvas, useFrame,useLoader} from '@react-three/fiber';
 import { TransformControls } from '@react-three/drei'
 
+import cardFrontImg from '../imgs/card_front.png';
+import cardBackImg from '../imgs/card_back.png';
+
+
 const Card = (props) => {
     
     const front = useRef();
     const back = useRef();
     
-    const front_texture = useLoader(THREE.TextureLoader,'/card_front.png');
-    const back_texture = useLoader(THREE.TextureLoader,'/card_back.png');
+    const front_texture = useLoader(THREE.TextureLoader,cardFrontImg);
+    const back_texture = useLoader(THREE.TextureLoader,cardBackImg);
 
     useFrame((state,delta) => { 
-       front.current.rotation.y += 0.05
-       back.current.rotation.y += 0.05
+       front.current.rotation.y += 0.03
+       back.current.rotation.y += 0.03
       
     });
 
