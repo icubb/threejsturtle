@@ -9,14 +9,18 @@ import cardBackImg from '../imgs/card_back.png';
 
 const Card = (props) => {
     
+    // reference to which plane
     const front = useRef();
     const back = useRef();
     
+    // loading each texture
     const front_texture = useLoader(THREE.TextureLoader,cardFrontImg);
     const back_texture = useLoader(THREE.TextureLoader,cardBackImg);
 
+    // movement param
     const [movement, setMovement] = useState(true);
 
+    //every frame this runs
     useFrame((state,delta) => { 
       if(movement) {
         front.current.rotation.y += 0.02
