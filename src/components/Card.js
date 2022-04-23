@@ -15,10 +15,13 @@ const Card = (props) => {
     const front_texture = useLoader(THREE.TextureLoader,cardFrontImg);
     const back_texture = useLoader(THREE.TextureLoader,cardBackImg);
 
+    const [movement, setMovement] = useState(true);
+
     useFrame((state,delta) => { 
-       front.current.rotation.y += 0.02
-       back.current.rotation.y += 0.02
-      
+      if(movement) {
+        front.current.rotation.y += 0.02
+        back.current.rotation.y += 0.02 
+      }
     });
 
     //Return view, these are regular three.js elements expressed in JSX
@@ -29,6 +32,7 @@ const Card = (props) => {
           {...props}
           ref={front}
           scale={15}
+          onClick={(event) => setMovement(!movement)}
           >
           <planeGeometry args={[1, 1.5]} />
           <meshStandardMaterial transparent={true} map={front_texture}  side={THREE.FrontSide} />
@@ -37,6 +41,7 @@ const Card = (props) => {
           {...props}
           ref={back}
           scale={15}
+          onClick={(event) => setMovement(!movement)}
           >
           <planeGeometry args={[1, 1.5]} />
           <meshStandardMaterial transparent={true} map={back_texture}  side={THREE.BackSide} />
