@@ -1,16 +1,19 @@
 {
   "files": {
     "main.css": "/threejsturtle/static/css/main.a85f37df.css",
-    "main.js": "/threejsturtle/static/js/main.a882d16c.js",
+    "main.js": "/threejsturtle/static/js/main.770b9f4c.js",
     "static/js/787.ff759ab0.chunk.js": "/threejsturtle/static/js/787.ff759ab0.chunk.js",
+    "static/media/card_front.png": "/threejsturtle/static/media/card_front.1315f835177785c49081.png",
+    "static/media/card_back.png": "/threejsturtle/static/media/card_back.6af8e9e3785e17bce2f5.png",
+    "static/media/waternormals.jpg": "/threejsturtle/static/media/waternormals.537ec85b965d414829ab.jpg",
     "static/media/logo.svg": "/threejsturtle/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/threejsturtle/index.html",
     "main.a85f37df.css.map": "/threejsturtle/static/css/main.a85f37df.css.map",
-    "main.a882d16c.js.map": "/threejsturtle/static/js/main.a882d16c.js.map",
+    "main.770b9f4c.js.map": "/threejsturtle/static/js/main.770b9f4c.js.map",
     "787.ff759ab0.chunk.js.map": "/threejsturtle/static/js/787.ff759ab0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a85f37df.css",
-    "static/js/main.a882d16c.js"
+    "static/js/main.770b9f4c.js"
   ]
 }
