@@ -16,8 +16,8 @@ const Card = (props) => {
     const back_texture = useLoader(THREE.TextureLoader,cardBackImg);
 
     useFrame((state,delta) => { 
-       front.current.rotation.y += 0.01
-       back.current.rotation.y += 0.01
+       front.current.rotation.y += 0.02
+       back.current.rotation.y += 0.02
       
     });
 
